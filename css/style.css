@@ -16,9 +16,9 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-start; }
   .container .item {
     background-color: purple;
-    flex: 1 1 calc((100% - 11 * 1.6rem) / 12); }
-    .container .item:not(:last-child) {
+    flex: 0 0 calc((100% - 11 * 1.6rem) / 12); }
+    .container .item:not(:nth-child(12n)) {
       margin-right: 1.6rem; }

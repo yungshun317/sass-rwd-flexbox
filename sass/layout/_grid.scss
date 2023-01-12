@@ -3,13 +3,13 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-start;
 
   .item {
     background-color: purple;
-    flex: 1 1 calc((100% - 11 * #{$gutter-horizontal}) / 12);
+    flex: 0 0 calc((100% - 11 * #{$gutter-horizontal}) / 12);
 
-    &:not(:last-child) {
+    &:not(:nth-child(12n)) {
       margin-right: $gutter-horizontal;
     }
   }

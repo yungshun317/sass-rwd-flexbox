@@ -1,3 +1,19 @@
+/*
+0 - 360px: XS
+360 - 656px: S
+656 - 1024px: M
+1024 - 1280px: L
+1280 - 1440px: XL
+1440px + : XXL
+
+$breakpoint argument choices:
+- xs
+- s
+- m
+- l
+- xl
+- xxl
+ */
 html {
   font-size: 62.5%; }
 

@@ -1,0 +1,42 @@
+// Media Query Manager
+/*
+0 - 360px: XS
+360 - 656px: S
+656 - 1024px: M
+1024 - 1280px: L
+1280 - 1440px: XL
+1440px + : XXL
+
+$breakpoint argument choices:
+- xs
+- s
+- m
+- l
+- xl
+- xxl
+ */
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: 22.5em) { @content }; // 360px
+  }
+
+  @if $breakpoint == s {
+    @media (max-width: 41em) { @content }; // 656px
+  }
+
+  @if $breakpoint == m {
+    @media (max-width: 64em) { @content }; // 1024px
+  }
+
+  @if $breakpoint == l {
+    @media (max-width: 80em) { @content }; // 1280px
+  }
+
+  @if $breakpoint == xl {
+    @media (max-width: 90em) { @content }; // 1440px
+  }
+
+  @if $breakpoint == xxl {
+    @media (min-width: 90em) { @content }; // 1440px
+  }
+}

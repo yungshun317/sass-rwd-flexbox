@@ -17,6 +17,10 @@ $breakpoint argument choices:
 html {
   font-size: 62.5%; }
 
+body {
+  line-height: 1.7rem;
+  color: white; }
+
 *,
 *::after,
 *::before {
@@ -48,14 +52,13 @@ body {
   .container .item {
     background-color: purple;
     flex: 0 0 calc((100% - 11 * 1.6rem) / 12); }
-    @media (max-width: 41em) {
-      .container .item {
-        flex: 0 0 calc((100% - 3 * 0.8rem) / 4); } }
     .container .item:not(:nth-child(12n)) {
       margin-right: 1.6rem; }
       @media (max-width: 41em) {
         .container .item:not(:nth-child(12n)) {
           margin-right: 0; } }
     @media (max-width: 41em) {
-      .container .item:not(:nth-child(4n)) {
-        margin-right: 0.8rem; } }
+      .container .item {
+        flex: 0 0 calc((100% - 3 * 0.8rem) / 4); }
+        .container .item:not(:nth-child(4n)) {
+          margin-right: 0.8rem; } }

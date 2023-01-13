@@ -32,9 +32,30 @@ body {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-start; }
+  justify-content: flex-start; }
+  @media (max-width: 90em) {
+    .container {
+      margin: 0 8.8rem 0 8.8rem; } }
+  @media (max-width: 64em) {
+    .container {
+      margin: 0 4rem 0 4rem; } }
+  @media (max-width: 41em) {
+    .container {
+      margin: 0 1.6rem 0 1.6rem; } }
+  @media (max-width: 22.5em) {
+    .container {
+      margin: 0 0.8rem 0 0.8rem; } }
   .container .item {
     background-color: purple;
     flex: 0 0 calc((100% - 11 * 1.6rem) / 12); }
+    @media (max-width: 41em) {
+      .container .item {
+        flex: 0 0 calc((100% - 3 * 0.8rem) / 4); } }
     .container .item:not(:nth-child(12n)) {
       margin-right: 1.6rem; }
+      @media (max-width: 41em) {
+        .container .item:not(:nth-child(12n)) {
+          margin-right: 0; } }
+    @media (max-width: 41em) {
+      .container .item:not(:nth-child(4n)) {
+        margin-right: 0.8rem; } }

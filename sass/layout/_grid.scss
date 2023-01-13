@@ -3,14 +3,44 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-start;
+  justify-content: flex-start;
+
+  @include respond(xl) {
+    margin: 0 8.8rem 0 8.8rem;
+  }
+
+  @include respond(m) {
+    margin: 0 4rem 0 4rem;
+  }
+
+  @include respond(s) {
+    margin: 0 1.6rem 0 1.6rem;
+  }
+
+  @include respond(xs) {
+    margin: 0 0.8rem 0 0.8rem;
+  }
 
   .item {
     background-color: purple;
     flex: 0 0 calc((100% - 11 * #{$gutter-horizontal}) / 12);
 
+    @include respond(s) {
+      flex: 0 0 calc((100% - 3 * #{$gutter-horizontal-small}) / 4);
+    }
+
     &:not(:nth-child(12n)) {
       margin-right: $gutter-horizontal;
+
+      @include respond(s) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond(s) {
+      &:not(:nth-child(4n)) {
+        margin-right: $gutter-horizontal-small;
+      }
     }
   }
 }

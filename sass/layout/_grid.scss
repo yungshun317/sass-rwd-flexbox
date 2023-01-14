@@ -25,25 +25,30 @@
 
   .item {
     background-color: purple;
-    // Column width
-    flex: 0 0 calc((100% - 11 * #{$gutter-horizontal}) / 12);
 
-    // Gutter
-    &:not(:nth-child(12n)) {
-      margin-right: $gutter-horizontal;
+    &__1-of-12 {
+      // Column width
+      flex: 0 0 calc((100% - 11 * #{$gutter-horizontal}) / 12);
 
-      @include respond(s) {
-        margin-right: 0;
+      // Gutter
+      &:not(:nth-child(12n)) {
+        margin-right: $gutter-horizontal;
+
+        @include respond(s) {
+          margin-right: 0;
+        }
       }
     }
 
-    @include respond(s) {
-      // Column width
-      flex: 0 0 calc((100% - 3 * #{$gutter-horizontal-small}) / 4);
+    &__1-of-4-s {
+      @include respond(s) {
+        // Column width
+        flex: 0 0 calc((100% - 3 * #{$gutter-horizontal-small}) / 4);
 
-      // Gutter
-      &:not(:nth-child(4n)) {
-        margin-right: $gutter-horizontal-small;
+        // Gutter
+        &:not(:nth-child(4n)) {
+          margin-right: $gutter-horizontal-small;
+        }
       }
     }
   }

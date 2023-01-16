@@ -65,6 +65,9 @@ body {
         @media (max-width: 64em) {
           .container .item__1-of-4:not(:nth-child(4n)) {
             margin-right: 0; } }
+        @media (max-width: 41em) {
+          .container .item__1-of-4:not(:nth-child(4n)) {
+            margin-right: 0; } }
     @media (max-width: 41em) {
       .container .item__1-of-4-s {
         flex: 0 0 calc((100% - 3 * 0.8rem) / 4); }
@@ -75,6 +78,14 @@ body {
         flex: 0 0 calc((100% - 2 * 1.6rem) / 3); }
         .container .item__1-of-3-m:not(:nth-child(3n)) {
           margin-right: 1.6rem; } }
+    @media (max-width: 64em) and (max-width: 41em) {
+      .container .item__1-of-3-m:not(:nth-child(3n)) {
+        margin-right: 0; } }
+    @media (max-width: 41em) {
+      .container .item__1-of-2-s {
+        flex: 0 0 calc((100% - 0.8rem) / 2); }
+        .container .item__1-of-2-s:not(:nth-child(2n)) {
+          margin-right: 0.8rem; } }
 
 .section {
   margin: 8rem auto 8rem auto; }

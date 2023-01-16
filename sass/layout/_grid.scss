@@ -51,6 +51,10 @@
         @include respond(m) {
           margin-right: 0;
         }
+
+        @include respond(s) {
+          margin-right: 0;
+        }
       }
     }
 
@@ -74,6 +78,22 @@
         // Gutter
         &:not(:nth-child(3n)) {
           margin-right: $gutter-horizontal;
+
+          @include respond(s) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &__1-of-2-s {
+      @include respond(s) {
+        // Column width
+        flex: 0 0 calc((100% - #{$gutter-horizontal-small}) / 2);
+
+        // Gutter
+        &:not(:nth-child(2n)) {
+          margin-right: $gutter-horizontal-small;
         }
       }
     }

@@ -94,7 +94,18 @@
         // Gutter
         &:not(:nth-child(2n)) {
           margin-right: $gutter-horizontal-small;
+
+          @include respond(xs) {
+            margin-right: 0;
+          }
         }
+      }
+    }
+
+    &__1-of-1-xs {
+      @include respond(xs) {
+        // Column width
+        flex: 0 0 100%;
       }
     }
   }

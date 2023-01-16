@@ -86,6 +86,12 @@ body {
         flex: 0 0 calc((100% - 0.8rem) / 2); }
         .container .item__1-of-2-s:not(:nth-child(2n)) {
           margin-right: 0.8rem; } }
+    @media (max-width: 41em) and (max-width: 22.5em) {
+      .container .item__1-of-2-s:not(:nth-child(2n)) {
+        margin-right: 0; } }
+    @media (max-width: 22.5em) {
+      .container .item__1-of-1-xs {
+        flex: 0 0 100%; } }
 
 .section {
   margin: 8rem auto 8rem auto; }

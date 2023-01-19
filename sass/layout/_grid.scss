@@ -58,6 +58,16 @@
       }
     }
 
+    &__1-of-2 {
+      // Column width
+      flex: 0 0 calc((100% - #{$gutter-horizontal}) / 2);
+
+      // Gutter
+      &:not(:nth-child(2n)) {
+        margin-right: $gutter-horizontal;
+      }
+    }
+
     &__1-of-4-s {
       @include respond(s) {
         // Column width
@@ -104,6 +114,13 @@
 
     &__1-of-1-xs {
       @include respond(xs) {
+        // Column width
+        flex: 0 0 100%;
+      }
+    }
+
+    &__1-of-1-s {
+      @include respond(s) {
         // Column width
         flex: 0 0 100%;
       }
